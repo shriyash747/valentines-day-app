@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Valentine’s Day 💘</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#ff4d6d">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div id="welcome" class="card">
+    <h1>Happy Valentine’s Day 💘</h1>
+    <p>Enter our secret code 💗</p>
+    <input type="password" id="password" placeholder="💞">
+    <br><br>
+    <button onclick="unlock()">Unlock 💝</button>
+    <p id="error" style="color:#ff4d6d; margin-top:10px;"></p>
+</div>
+
+<div id="hint" class="card" style="display:none;">
+    <h2>Surprise! 🎉</h2>
+    <p>Go to the place in our home which I always keep unorganized… you’ll find a small surprise 💐</p>
+    <button onclick="startQuiz()">Next ➡️</button>
+</div>
+
+<div id="game" class="card" style="display:none;">
+    <h2 id="question"></h2>
+    <div id="options"></div>
+    <div id="selectedAnswers" style="margin-top:20px;"></div>
+</div>
+
+<audio id="bgMusic" loop>
+    <source src="/static/music.mp3" type="audio/mpeg">
+</audio>
+
+<script src="/static/game.js"></script>
+</body>
+</html>

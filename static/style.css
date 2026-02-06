@@ -1,0 +1,74 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Arial", sans-serif;
+    background: linear-gradient(135deg, #ff4d6d, #ff9a9e);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 24px;
+    padding: 30px 20px;
+    width: 90%;
+    max-width: 380px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    color: #ff4d6d;
+    position: relative;
+}
+
+h1,h2 { margin-top:0; }
+
+input {
+    width: 80%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 14px;
+    border: 2px solid #ff4d6d;
+    text-align: center;
+}
+
+button {
+    width: 85%;
+    margin: 8px auto;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: none;
+    background: #ff4d6d;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.1s, background 0.2s;
+}
+
+button:hover {
+    background: #ff2f59;
+    transform: scale(1.03);
+}
+
+/* Hearts */
+.heart {
+    position: fixed;
+    bottom: -20px;
+    font-size: 20px;
+    animation: floatUp 6s linear infinite;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+@keyframes floatUp {
+    to { transform: translateY(-120vh) scale(1.6); opacity: 0; }
+}
+
+/* Confetti */
+@keyframes fall { to { transform: translateY(120vh); opacity: 0; } }
+
+#options button { display:block; margin:10px auto; width:80%; }
+
+#selectedAnswers { text-align:left; font-weight:bold; color:#ff4d6d; }
