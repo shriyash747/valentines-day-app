@@ -222,8 +222,8 @@ function chooseDinner(type){
 function chooseGift(gift){
     const msg = document.getElementById("giftMessage");
     if(gift === "Zweibrücken/Mitzingen") msg.innerText = "Adventure time! We will go to Zweibrücken/Mitzingen together 🎁💖";
-        if(gift === "Douglus, Berkinstocks") msg.innerText = "Sweet choice! We'll treat you to Douglus and comfy Berkinstocks for happy days 🎁💖";
-        else if(gift === "Electric Toothbrush") msg.innerText = "Perfect! You’ll have a sparkling smile 😁💖";
+    else if(gift === "Douglus, Berkinstocks") msg.innerText = "Sweet choice! We'll treat you to Douglus and comfy Berkinstocks for happy days 🎁💖";
+    else if(gift === "Electric Toothbrush") msg.innerText = "Perfect! You'll have a sparkling smile 😁💖";
     _selectedGift = gift;
     _checkFinalChoices();
 }
