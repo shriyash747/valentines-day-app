@@ -7,9 +7,10 @@ body {
     background: linear-gradient(135deg, #ff4d6d, #ff9a9e);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     text-align: center;
-    overflow: hidden;
+    overflow-y: auto;
+    padding: 20px 0;
 }
 
 .card {
