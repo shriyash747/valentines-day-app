@@ -277,7 +277,7 @@ function openValentinePage(){
                 <h1>To My Dearest Wife ❤️</h1>
                 <p class="lead">Every day with you is a story I want to write forever.</p>
                 <p class="lead">You are my comfort, my joy, and my greatest adventure.</p>
-                <p class="choices">Tonight: Dress — ${escapeHtml(_selectedDress)}, Dinner — ${escapeHtml(_selectedDinner)}, Gift — ${escapeHtml(_selectedGift)}</p>
+                <p class="choices">Tonight: Dress — ${escapeHtml(_selectedDress)}, Gift — ${escapeHtml(_selectedGift)}, Dinner — ${escapeHtml(_selectedDinner)}</p>
                 <p class="small">May our laughter be loud, our hugs be long, and our love grow deeper every day. Happy Valentine’s Day.</p>
             </div>
             <script>
