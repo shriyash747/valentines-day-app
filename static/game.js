@@ -23,9 +23,9 @@ const questions = [
     { q:"What is my favorite dish? 😋", options:["Pizza","Pasta","Salad","Chinese"], correct:3 },
     { q:"Best trip with me? ✈️", options:["Swiss","Malta","Austria","France","Everywhere you take me ❤️"], correct:4 },
     { q:"What do I like most about you? 😘", options:["Cheeks","Lips","Hand","Tongue out 😜"], correct:3 },
-    { q:"What is this you like to buy most and I like to remove most? 🧦", options:["Socks","Shoes","Jeans","Shirts"], correct:0, isTyping:true, answerText:"Socks", hint:"It starts with S... you love them!" },
-    { q:"Something you use to do when I use to drive? 🚗", isTyping:true, answerText:"Pinch", hint:"which your mother use to do to you when you were small and when you use to ask others for food." },
-    { q:"What was our fav go to place when we use to be hungry? 🌵", isTyping:true, answerText:"Mcd", hint:"place where a person wears red hair." }
+    { q:"What is this you like to buy most and I like to remove most? ", options:["Socks","Shoes","Jeans","Shirts"], correct:0, isTyping:true, answerText:"Socks", hint:"It starts with S... you love them!" },
+    { q:"Something you use to do when I use to drive? ", isTyping:true, answerText:"Pinch", hint:"which your mother use to do to you when you were small and when you use to ask others for food." },
+    { q:"What was our fav go to place when we use to be hungry? ", isTyping:true, answerText:"Mcd", hint:"place where a person wears red hair." }
 ];
 
 let currentQ = 0;
