@@ -186,7 +186,7 @@ function showFinalSurprise(){
         <h3>🎁 Gift you want</h3>
         <div id="giftOptions">
             <button onclick="chooseGift('Douglus, Berkinstocks')">Douglus, Berkinstocks</button>
-            <button onclick="chooseGift('Electric Toothbrush')">Electric Toothbrush</button>
+            <button onclick="chooseGift('Cute Jewellery')">Cute Jewellery</button>
         </div>
         <p id="giftMessage" style="color:#ff4d6d; margin-top:10px;">Choose wisely and enjoy your gift! 🎁</p>
     `;
@@ -221,9 +221,8 @@ function chooseDinner(type){
 
 function chooseGift(gift){
     const msg = document.getElementById("giftMessage");
-    if(gift === "Zweibrücken/Mitzingen") msg.innerText = "Adventure time! We will go to Zweibrücken/Mitzingen together 🎁💖";
-    else if(gift === "Douglus, Berkinstocks") msg.innerText = "Sweet choice! We'll treat you to Douglus and comfy Berkinstocks for happy days 🎁💖";
-    else if(gift === "Electric Toothbrush") msg.innerText = "Perfect! You'll have a sparkling smile 😁💖";
+    if(gift === "Douglus, Berkinstocks") msg.innerText = "Sweet choice! We'll treat you to Douglus and comfy Berkinstocks for happy days 🎁💖";
+    else if(gift === "Cute Jewellery") msg.innerText = "Wonderful! A beautiful piece of cute jewellery for my beautiful girl 💎💖";
     _selectedGift = gift;
     _checkFinalChoices();
 }
@@ -273,6 +272,9 @@ function openValentinePage(){
             </style>
         </head>
         <body>
+            <audio id="bgMusic" loop autoplay style="display:none;">
+                <source src="/static/music.mp3" type="audio/mpeg">
+            </audio>
             <div class="card">
                 <h1>To My Dearest Wife ❤️</h1>
                 <p class="lead">Every day with you is a story I want to write forever.</p>
@@ -282,6 +284,7 @@ function openValentinePage(){
             </div>
             <script>
                 (function(){
+                    const music=document.getElementById('bgMusic');if(music){music.volume=0.4;music.play().catch(()=>{})}
                     const emojis=['💖','✨','🌟','💘'];
                     const c=document.createElement('canvas');document.body.appendChild(c);c.width=innerWidth;c.height=innerHeight;c.style.position='fixed';c.style.left=0;c.style.top=0;c.style.pointerEvents='none';const ctx=c.getContext('2d');const parts=[];for(let i=0;i<120;i++){parts.push({x:Math.random()*c.width,y:Math.random()*-c.height*0.5,vx:(Math.random()-0.5)*4,vy:Math.random()*3+1,size:14+Math.random()*24,emoji:emojis[Math.floor(Math.random()*emojis.length)],rot:Math.random()*360,spin:(Math.random()-0.5)*0.2})}
                     let start=null;function draw(t){if(!start)start=t;const e=t-start;ctx.clearRect(0,0,c.width,c.height);parts.forEach(p=>{p.x+=p.vx;p.y+=p.vy;p.vy+=0.03;p.rot+=p.spin;ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.rot*Math.PI/180);ctx.font=p.size+'px serif';ctx.textAlign='center';ctx.fillText(p.emoji,0,0);ctx.restore()});if(e<4200)requestAnimationFrame(draw);}requestAnimationFrame(draw);
