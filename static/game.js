@@ -1,5 +1,5 @@
 const SECRET = "Pillu";
-const PASSWORD_HINT = "Hint: my nickname for you when we were small 💌, Starts with 16th alphabet 😋 ";
+const PASSWORD_HINT = "Hint: My nickname for you when we were small 💌, Starts with 16th alphabet 😋 ";
 
 // Romantic messages for each quiz question
 const romanticMessages = [
@@ -7,7 +7,7 @@ const romanticMessages = [
     "2️⃣ I have enjoyed each day with you and will enjoy many. No matter what happens. I can't live without you.",
     "3️⃣ Sorry I disturb you a lot, butttt that's my fav timepass :p",
     "4️⃣ I feel happy when you are happy and I want to always see you happy.",
-    "5️⃣ I am so proud of you that you can't believe, the things you have achieved in Germany as well as in India are just commendable",
+    "5️⃣ I am so proud of you that you can't believe, the things you have achieved in Mexico as well as in India are just commendable",
     "6️⃣ I will always be by your side, care for you, make you feel safe, disturb you hahaha, uplift you. Love you a lot Niki ❤️",
     "7️⃣ I love your sense of fashion, even though you always end up with more socks than you need! 🧦😄❤️",
     "8️⃣ Those drives together were so fun, and you always kept me on my toes! 😂💕",
@@ -34,7 +34,7 @@ let messagesShown = 0;
 // --- PASSWORD UNLOCK ---
 function unlock(){
     const val = document.getElementById("password").value;
-    if(val === SECRET){
+    if(val.toLowerCase() === SECRET.toLowerCase()){
         document.getElementById("welcome").style.display = "none";
         playMusic();
         document.getElementById("hint").style.display = "block";
@@ -178,8 +178,8 @@ function showFinalSurprise(){
         <h3>🍽️ Dinner</h3>
         <div id="dinnerOptions">
             <button onclick="chooseDinner('German')">German</button>
-            <button onclick="chooseDinner('Asian')">Asian</button>
-            <button onclick="chooseDinner('Indian')">Indian</button>
+            <button onclick="chooseDinner('Mexican')">Mexican</button>
+            <button onclick="chooseDinner('Chinese')">Chinese</button>
         </div>
         <p id="dinnerMessage" style="color:#ff4d6d; margin-top:10px;"></p>
 
@@ -213,8 +213,8 @@ function chooseDress(store){
 function chooseDinner(type){
     const msg = document.getElementById("dinnerMessage");
     if(type === "German") msg.innerText = "Yummy! We will enjoy a German feast together 🍽️❤️";
-    if(type === "Asian") msg.innerText = "Amazing! Some Asian delights for my love 😋";
-    if(type === "Indian") msg.innerText = "Spicy & delicious Indian dinner coming up for my darling 🌶️💖";
+    if(type === "Mexican") msg.innerText = "Amazing! Some Mexican delights for my love 😋";
+    if(type === "Chinese") msg.innerText = "Delicious Chinese cuisine coming up for my darling 🥢💖";
     _selectedDinner = type;
     _checkFinalChoices();
 }
@@ -279,6 +279,7 @@ function openValentinePage(){
                 <h1>To My Dearest Wife ❤️</h1>
                 <p class="lead">Every day with you is a story I want to write forever.</p>
                 <p class="lead">You are my comfort, my joy, and my greatest adventure.</p>
+                <p class="lead">I may be the most annoying person you've ever come across, but I can't imagine a single moment without you. I loved you back then, I love you now, and I will cherish and care for you with all my heart until my last breath. 💕</p>
                 <p class="choices">Tonight: Dress — ${escapeHtml(_selectedDress)}, Gift — ${escapeHtml(_selectedGift)}, Dinner — ${escapeHtml(_selectedDinner)}</p>
                 <p class="small">May our laughter be loud, our hugs be long, and our love grow deeper every day. Happy Valentine’s Day.</p>
             </div>
