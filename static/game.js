@@ -1,4 +1,4 @@
-const SECRET = "Pillu";
+const SECRET = "poopoo";
 const PASSWORD_HINT = "Hint: My nickname for you when we were small 💌, Starts with 16th alphabet 😋 ";
 
 // Romantic messages for each quiz question
